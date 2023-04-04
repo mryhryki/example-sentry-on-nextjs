@@ -33,7 +33,9 @@ export default function Home() {
                     borderRadius: '12px',
                     border: 'none'
                 }} onClick={() => {
-                    throw new Error("Sentry Frontend Error");
+                    const id = crypto.randomUUID();
+                    throw new Error(`Sentry Frontend Error: ${id}`);
+                    // throw new Error("Sentry Frontend Error");
                 }}>
                     Throw error
                 </button>
